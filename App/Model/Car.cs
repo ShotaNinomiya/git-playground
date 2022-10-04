@@ -1,16 +1,20 @@
 namespace App.Model;
-public class Person
+
+public class Car
 {
     public int Id { get; set; }
     public string Name { get; set; }
+    public double Plice { get; set; }
 
-    public Person(int id, string name)
+    public Car(int id, string name, double plice)
     {
-        if(id < 0 || id > 999) throw new ArgumentException();
+        if(id < 1000) throw new ArgumentException();
         if(string.IsNullOrEmpty(name)) throw new ArgumentException();
+        if(plice < 0) throw new ArgumentException();
 
         Id = id;
         Name = name;
+        Plice = plice;
     }
 
     public override string ToString()
@@ -20,7 +24,6 @@ public class Person
 
     public static string GetHeader()
     {
-        return $"{nameof(Person.Id)},{nameof(Person.Name)}";
+        return $"{nameof(Car.Id)},{nameof(Car.Name)}";
     }
-
 }

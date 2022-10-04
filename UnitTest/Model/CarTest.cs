@@ -1,14 +1,14 @@
 using App.Model;
 namespace UnitTest.Model;
-public class PersonTest
+public class CarTest
 {
     [Fact]
     public void CheckToStringFormat()
     {
-        var expectedValue = "0,test";
+        var expectedValue = "1000,test";
 
-        Person p = new(0, "test");
-        var actualValue = p.ToString();
+        Car c = new(1000, "test", 100);
+        var actualValue = c.ToString();
 
         actualValue.Is(expectedValue);
     }
@@ -18,16 +18,7 @@ public class PersonTest
     {
         Assert.Throws<ArgumentException>(() =>
         {
-            Person p = new(-1, "test");
-        });
-    }
-
-    [Fact]
-    public void ThrowArgumentExceptionWhenIdHas1000()
-    {
-        Assert.Throws<ArgumentException>(() =>
-        {
-            Person p = new(1000, "test");
+            Car c = new(999, "test", 1000);
         });
     }
 
@@ -36,7 +27,7 @@ public class PersonTest
     {
         Assert.Throws<ArgumentException>(() =>
         {
-            Person p = new(0, "");
+            Car c = new(1000, "", 1000);
         });
     }
 }
