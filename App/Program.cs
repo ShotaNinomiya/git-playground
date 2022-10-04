@@ -5,3 +5,8 @@ foreach (var p in PeopleGenerator.GetPeople())
 {
     Console.WriteLine(p);
 }
+
+foreach (var c in CarsGenerator.GetCars())
+{
+    Console.WriteLine(c);
+}
