@@ -5,9 +5,9 @@ public class HouseTest
     [Fact]
     public void CheckToStringFormat()
     {
-        var expectedValue = "0,test";
+        var expectedValue = "2000,test";
 
-        House h = new(0, "test");
+        House h = new(2000, "test");
         var actualValue = h.ToString();
 
         actualValue.Is(expectedValue);
