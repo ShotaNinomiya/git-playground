@@ -1,2 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+
+using App.Logic;
+foreach (var p in PeopleGenerator.GetPeople())
+{
+    Console.WriteLine(p);
+}
