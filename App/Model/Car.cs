@@ -3,6 +3,7 @@ namespace App.Model;
 public class Car
 {
     // NOTE: 車のIDは1000以上とする。
+    // NOTE: テスト
     public int Id { get; }
     public string Name { get; set; }
     public double Plice { get; set; }
