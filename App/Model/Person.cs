@@ -6,7 +6,7 @@ public class Person
 
     public Person(int id, string name)
     {
-        if(id < 0) throw new ArgumentException();
+        if(id < 0 || id > 999) throw new ArgumentException();
         if(string.IsNullOrEmpty(name)) throw new ArgumentException();
 
         Id = id;
